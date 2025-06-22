@@ -1,12 +1,24 @@
+
+#1Bibliotecas
 import cv2
 
-#Cambiar ruta para personalizar
-img = cv2.imread('/home/dayan/Documentos/Canny/moneda.jpg', 0)
-bordeCanny = cv2.Canny(img, 100, 200)
+capture = cv2.VideoCapture(0)
+while (capture.isOpened()):
+    ret, frame = capture.read()
+    if (ret == True):
+        #Aplicar Canny
+        bordeCanny = cv2.Canny(frame, 100, 200)
 
-#Muestra la imagen
-cv2.imshow('Original', img)
-cv2.imshow('Canny', bordeCanny)
+        #Mostrar imágenes
+        cv2.imshow('Original', frame)
+        cv2.imshow('Canny', bordeCanny)
 
-cv2.waitKey(0)
+        #Presionar una tecla para dejar de ejecutar
+        if (cv2.waitKey(1) == ord('s')):
+            break
+    else:
+        break
+
+capture.release()
 cv2.destroyAllWindows()
+
