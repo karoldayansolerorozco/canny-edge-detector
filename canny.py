@@ -1,5 +1,6 @@
 import cv2
 
+#Cambiar ruta para personalizar
 img = cv2.imread('/home/dayan/Documentos/Canny/moneda.jpg', 0)
 bordeCanny = cv2.Canny(img, 100, 200)
 
