@@ -1,13 +1,13 @@
 # Canny Edge Detector 🖼️🔍
 
-Este es un pequeño proyecto en Python que utiliza OpenCV para detectar bordes en una imagen usando el algoritmo de Canny.
+This is a small Python project that uses OpenCV to detect edges in an image using the Canny algorithm.
 
-## 📦 Requisitos
+## 📦 Requirements
 
 - Python 3.x
 - OpenCV
 
-Puedes instalar OpenCV con:
+You can install OpenCV with:
 
 ```bash
 pip install opencv-python
